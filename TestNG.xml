@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="CalculatorTestSuite" parallel="methods" thread-count="4">
+    <listeners>
+        <listener class-name="Listener.CustomListener"/>
+    </listeners>
+
+    <test name="PositiveTests">
+        <groups>
+            <run>
+                <include name="positive"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="TestNGHomeTasks.TestNGHomeTask"/>
+        </classes>
+    </test>
+
+    <test name="NegativeTests">
+        <groups>
+            <run>
+                <include name="negative"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="TestNGHomeTasks.TestNGHomeTask"/>
+        </classes>
+    </test>
+</suite>
